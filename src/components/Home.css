@@ -28,7 +28,7 @@ nav>img {
 .featureData {
     position: absolute;
     top: 48%;
-    left: 16%;
+    left: 13.7%;
     transform: translate(50%, -50%);
     color: aqua;
     font-size: 45px;
@@ -41,7 +41,7 @@ nav>img {
     position: absolute;
     text-align: center;
     top: 48%;
-    left: 11%;
+    left: 8%;
     transform: translate(50%, -50%);
     color: aqua;
     font-size: 45px;
@@ -94,13 +94,15 @@ nav>img {
 .product>img {
     width: 15%;
     border: 4px solid transparent;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.selectedProduct {
+.product .selectedProduct {
     border: 4px solid orange;
+    border-radius: 5px;
+
 }
 
 .feature>button {
