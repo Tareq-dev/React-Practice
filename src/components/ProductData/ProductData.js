@@ -2,20 +2,20 @@ import React from 'react'
 import './ProductData.css'
 
 function ProductData(props) {
-    console.log(props)
     const product = props.data.colorOptions.map((p, i) => {
+
         return (
-            <img className={i === 0 ? "selectedProduct" : ""} key={i} src={p.imageUrl} alt="" />
+            <img onClick={() => props.onClickProductPreview(i)} className={i === props.position.position ? "selectedProduct" : ""} key={i} src={p.imageUrl} alt="" />
         )
     })
 
     const featureList = props.data.featureList.map((f, i) => {
         return (
-            <button className={i === 0 ? "selectedFeature" : ""} onClick="" key={i} type="">{f}</button>
+            <button className={props.position === 0 ? "selectedFeature" : ""} key={i} type="">{f}</button>
         )
     })
 
-    
+
     return (
         <div className='left'>
             <h2>{props.data.title}</h2>
