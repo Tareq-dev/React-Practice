@@ -1,0 +1,60 @@
+.right {
+    width: 50%;
+
+}
+
+.right>img {
+    width: 90%;
+}
+
+.featureData {
+    position: absolute;
+    top: 48%;
+    left: 15.7%;
+    transform: translate(50%, -50%);
+    color: aqua;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.featureHeartData {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    top: 48%;
+    left: 8%;
+    transform: translate(50%, -50%);
+    color: aqua;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.heart {
+    color: red;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.featureHeartData>p {
+    margin: 10px;
+}
+
+.selectedProduct {
+    border: 4px solid orange;
+    border-radius: 5px;
+
+}
