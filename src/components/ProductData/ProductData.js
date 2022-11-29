@@ -3,15 +3,16 @@ import './ProductData.css'
 
 function ProductData(props) {
     const product = props.data.colorOptions.map((p, i) => {
-
         return (
             <img onClick={() => props.onClickProductPreview(i)} className={i === props.position.position ? "selectedProduct" : ""} key={i} src={p.imageUrl} alt="" />
         )
     })
 
+
     const featureList = props.data.featureList.map((f, i) => {
+
         return (
-            <button className={props.position === 0 ? "selectedFeature" : ""} key={i} type="">{f}</button>
+            <button onClick={() => props.feature(i)} className={i === 0 && props.heartBeat ? "selectedFeature" : ""} key={i} type="">{f}</button>
         )
     })
 
@@ -27,6 +28,9 @@ function ProductData(props) {
             <h3>Features</h3>
             <div className='feature'>
                 {featureList}
+            </div>
+            <div>
+                <button className='buy' type="">Buy</button>
             </div>
         </div>
     )

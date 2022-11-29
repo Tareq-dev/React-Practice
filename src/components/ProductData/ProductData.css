@@ -10,7 +10,7 @@
 .featureData {
     position: absolute;
     top: 48%;
-    left: 15.7%;
+    left: 17.5%;
     transform: translate(50%, -50%);
     color: aqua;
     font-size: 45px;
@@ -23,7 +23,7 @@
     position: absolute;
     text-align: center;
     top: 48%;
-    left: 8%;
+    left: 11%;
     transform: translate(50%, -50%);
     color: aqua;
     font-size: 45px;
@@ -51,6 +51,11 @@
 
 .featureHeartData>p {
     margin: 10px;
+}
+
+.featureStyle {
+    background-color: blue;
+
 }
 
 .selectedProduct {

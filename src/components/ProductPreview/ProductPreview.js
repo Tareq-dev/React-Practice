@@ -7,14 +7,15 @@ function ProductPreview(props) {
         <div className='right'>
             <img src={props.productImage.productImage} alt="" />
             {
-                props.heartBeat ?
+                props.heartBeat === true ?
+
+                    <div className='featureData'>
+                        <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
+                    </div>
+                    :
                     <div className='featureHeartData'>
                         <GiTechnoHeart className='heart' />
                         <p>78</p>
-                    </div>
-                    :
-                    <div className='featureData'>
-                        <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
                     </div>
             }
         </div>

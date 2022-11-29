@@ -8,7 +8,7 @@ import Data from './Data'
 function Home() {
     const data = Data;
     const [productImage, setProductImage] = useState("")
-    const [heartBeat, setHeartBeat] = useState(true)
+    const [heartBeat, setHeartBeat] = useState(false)
     const [position, setPosition] = useState(0)
 
     const onClickProductPreview = (i) => {
@@ -17,9 +17,13 @@ function Home() {
         setPosition({ position: i })
     }
 
-    // const onclickFeatureData = (i) => {
-    //     setHeartBeat(false)
-    // }
+    const feature = (i) => {
+        if (i === 0) {
+            setHeartBeat(true);
+        } else {
+            setHeartBeat(false);
+        }
+    }
     return (
         <div>
             <nav className="logo">
@@ -27,7 +31,7 @@ function Home() {
             </nav>
             <div className='content'>
                 <ProductPreview data={data} productImage={productImage} heartBeat={heartBeat} />
-                <ProductData data={data} onClickProductPreview={onClickProductPreview} position={position} />
+                <ProductData data={data} onClickProductPreview={onClickProductPreview} position={position} feature={feature} heartBeat={heartBeat} />
             </div>
         </div>
     )

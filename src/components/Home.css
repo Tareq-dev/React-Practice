@@ -63,11 +63,15 @@ nav>img {
 }
 
 .selectedFeature {
-    background-color: rgb(203, 205, 207);
+    background-color: rgb(66, 139, 211);
+}
 
+.selectedFeature1 {
+    background-color: rgb(211, 66, 126);
 }
 
 .buy {
+    padding: 0px, 10px;
     margin-top: 30px;
     border: none;
     background-color: green;
